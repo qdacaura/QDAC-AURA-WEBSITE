@@ -3,64 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QDAC AURA - Where Embedded Meets Intelligence. Specialized in Quantum Computing, Digital Twin, AI, and Cybersecurity.">
     <title>QDAC Aura | Where Embedded Meets Intelligence</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --qdac-primary: #2c3e50;
-            --qdac-secondary: #3498db;
-            --qdac-accent: #9b59b6;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .qdac-hero {
-            background: linear-gradient(135deg, var(--qdac-primary) 0%, #1a2530 100%);
-            color: white;
-            padding: 120px 0 80px;
-        }
-        .qdac-tagline {
-            font-size: 1.4rem;
-            color: #ecf0f1;
-            margin-bottom: 30px;
-        }
-        .section-title {
-            color: var(--qdac-primary);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        .nav-link {
-            font-weight: 500;
-        }
-        .expertise-table {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 2rem;
-        }
-        .project-card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            height: 100%;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .skill-pill {
-            background: var(--qdac-secondary);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            margin: 5px;
-        }
-    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarMain">
+<body>
     <!-- Navigation -->
-    <nav id="navbarMain" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">QDAC AURA</a>
+            <a class="navbar-brand" href="#home">
+                <strong>QDAC AURA</strong>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,54 +28,59 @@
                     <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="qdac-hero text-center" id="home">
+    <section id="home" class="hero-section">
         <div class="container">
-            <h1 class="display-3 fw-bold mb-4">⚡ QDAC AURA</h1>
-            <h2 class="h1 mb-4">Where Embedded Meets Intelligence</h2>
-            <p class="qdac-tagline">Pioneering Solutions and Skill Transformation at the Convergence of Quantum Computing, Digital Twin, AI, and Cybersecurity.</p>
-            <p class="lead">Fusing intelligence for the quantum age</p>
+            <div class="hero-content">
+                <h1 class="hero-title">⚡ QDAC AURA</h1>
+                <h2 class="hero-subtitle">Where Embedded Meets Intelligence</h2>
+                <p class="hero-tagline">Pioneering Solutions and Skill Transformation at the Convergence of Quantum Computing, Digital Twin, AI, and Cybersecurity (QDAC).</p>
+                <p class="hero-motto">Fusing intelligence for the quantum age</p>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">🔷 About QDAC AURA</h2>
-            <p class="lead text-center">Innovation & Empowerment</p>
-            <div class="row mt-5">
-                <div class="col-lg-10 mx-auto">
-                    <p>QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
-                    <p>We focus on the powerful convergence of Quantum Computing, Digital Twin, Artificial Intelligence, and Cybersecurity. Our model is unique: high-impact industrial project development is seamlessly integrated with rigorous, hands-on training.</p>
-                    <p>Our core commitment is to build and train through experience. We use every active project—from AI-based analytical science to computational drug design—as a live laboratory for our consultants and graduates.</p>
-                    <p>Founded and mentored by <strong>Manivannan Natarajan</strong> (30+ years of industrial wisdom), QDAC AURA’s team, including dynamic engineers like Navaneethan and Harishwaran, embodies the synergy of seasoned expertise and next-generation innovation.</p>
-                    <blockquote class="blockquote text-center my-5 p-3 bg-light border-start border-3 border-primary">
-                        <p class="mb-0">💡 <em>Think Deep. Build Smart. Innovate Fearlessly.</em></p>
-                    </blockquote>
+            <h2 class="section-title">🔷 About QDAC AURA</h2>
+            <p class="section-subtitle">Innovation & Empowerment</p>
+            
+            <div class="about-content">
+                <p>QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
+                
+                <p>We focus on the powerful convergence of Quantum Computing, Digital Twin, Artificial Intelligence, and Cybersecurity. Our model is unique: high-impact industrial project development is seamlessly integrated with rigorous, hands-on training.</p>
+                
+                <p>Our core commitment is to build and train through experience. We use every active project—from AI-based analytical science to computational drug design—as a live laboratory for our consultants and graduates.</p>
+                
+                <p>Founded and mentored by <strong>Manivannan Natarajan</strong> (30+ years of industrial wisdom), QDAC AURA's team, including dynamic engineers like Navaneethan and Harishwaran, embodies the synergy of seasoned expertise and next-generation innovation.</p>
+                
+                <div class="motto-box">
+                    <p class="motto-text">💡 Think Deep. Build Smart. Innovate Fearlessly.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Expertise Section -->
-    <section id="expertise" class="py-5 bg-light">
+    <section id="expertise" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title text-center">🎯 Strategic Consulting & Project Development</h2>
-            <p class="text-center mb-5">We offer specialized consulting, project execution, and R&D partnership in areas that require high precision and advanced modeling.</p>
+            <h2 class="section-title">🎯 Strategic Consulting & Project Development</h2>
+            <p class="section-subtitle">We offer specialized consulting, project execution, and R&D partnership in areas that require high precision and advanced modeling.</p>
             
             <div class="expertise-table">
                 <div class="table-responsive">
                     <table class="table table-hover">
-                        <thead class="table-dark">
+                        <thead>
                             <tr>
-                                <th scope="col">Area of Expertise</th>
-                                <th scope="col">Focus & Solution Development</th>
+                                <th>Area of Expertise</th>
+                                <th>Focus & Solution Development</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -127,7 +90,7 @@
                             </tr>
                             <tr>
                                 <td><strong>High-Precision Optics Modeling</strong></td>
-                                <td>Developing Digital Twin models for Wavefront Sensors and Speckle Shear Interferometry for non-destructive testing and optical measurement.</td>
+                                <td>Developing Digital Twin models for Wavefront Sensors and Speckle Shear Interferometry for non-destructive testing and high-resolution optical measurement.</td>
                             </tr>
                             <tr>
                                 <td><strong>AI in Analytical Science</strong></td>
@@ -144,43 +107,35 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="py-5">
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">🧩 Featured Projects</h2>
-            <p class="text-center mb-5">Our current active projects showcase the depth of our R&D capabilities and serve as our primary training platforms.</p>
+            <h2 class="section-title">🧩 Featured Projects</h2>
+            <p class="section-subtitle">Our current active projects showcase the depth of our R&D capabilities and serve as our primary training platforms.</p>
             
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="project-card card">
-                        <div class="card-body">
-                            <h5 class="card-title">Intelligent Industrial Control</h5>
-                            <p class="card-text">F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization.</p>
-                        </div>
+            <div class="row projects-grid">
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <h4>Intelligent Industrial Control</h4>
+                        <p>F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="project-card card">
-                        <div class="card-body">
-                            <h5 class="card-title">Smart Retail Automation</h5>
-                            <p class="card-text">AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
-                        </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <h4>Smart Retail Automation</h4>
+                        <p>AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="project-card card">
-                        <div class="card-body">
-                            <h5 class="card-title">Traffic & Security Analytics</h5>
-                            <p class="card-text">YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
-                        </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <h4>Traffic & Security Analytics</h4>
+                        <p>YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="project-card card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ecological Modeling</h5>
-                            <p class="card-text">Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
-                        </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <h4>Ecological Modeling</h4>
+                        <p>Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
                     </div>
                 </div>
             </div>
@@ -188,46 +143,49 @@
     </section>
 
     <!-- Training Section -->
-    <section id="training" class="py-5 bg-light">
+    <section id="training" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title text-center">🎓 Graduate Skill Transformation</h2>
-            <p class="text-center mb-5">Our Training Programs for Technology Graduates are entirely project-driven, ensuring participants gain practical, marketable skills.</p>
+            <h2 class="section-title">🎓 Graduate Skill Transformation</h2>
+            <p class="section-subtitle">Our Training Programs for Technology Graduates are entirely project-driven, ensuring participants gain practical, marketable skills.</p>
             
-            <p class="text-center">Key Skill Transformation Areas Include:</p>
-            <div class="text-center mt-4">
-                <span class="skill-pill">Industrial Digital Twin Modeling and Simulation</span>
-                <span class="skill-pill">Advanced Embedded Systems and Automation</span>
-                <span class="skill-pill">Deep Learning Model Design and Deployment (AI)</span>
-                <span class="skill-pill">IoT/IIoT Security and Threat Detection</span>
+            <div class="skills-container">
+                <div class="skill-pill">Industrial Digital Twin Modeling and Simulation</div>
+                <div class="skill-pill">Advanced Embedded Systems and Automation</div>
+                <div class="skill-pill">Deep Learning Model Design and Deployment (AI)</div>
+                <div class="skill-pill">IoT/IIoT Security and Threat Detection</div>
             </div>
         </div>
     </section>
 
-    <!-- Connect Section -->
-    <section id="connect" class="py-5">
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">🤝 Connect with Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <p class="lead">We are actively seeking industry partners for R&D collaboration and project deployment, and welcoming ambitious technology graduates ready to transform their careers through live project work.</p>
-                    <p>Message us to explore how QDAC AURA can empower your innovation roadmap or accelerate your career.</p>
-                    <!-- Placeholder for Contact Form -->
-                    <div class="mt-5 p-4 bg-light rounded">
-                        <p class="mb-3"><strong>Contact Us:</strong></p>
-                        <p>Email: your-email@qdacaura.com</p>
-                    </div>
+            <h2 class="section-title">🤝 Connect with Us</h2>
+            <div class="contact-content">
+                <p class="contact-intro">We are actively seeking industry partners for R&D collaboration and project deployment, and welcoming ambitious technology graduates ready to transform their careers through live project work.</p>
+                
+                <p class="contact-cta">Message us to explore how QDAC AURA can empower your innovation roadmap or accelerate your career.</p>
+                
+                <div class="contact-info">
+                    <p><strong>Get in Touch:</strong></p>
+                    <p>Email: contact@qdacaura.com</p>
+                    <p>Phone: +91-XXXXXXXXXX</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2024 QDAC AURA. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 QDAC AURA. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
