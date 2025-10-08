@@ -1,4 +1,4 @@
-// NVIDIA-Style QDAC AURA JavaScript - FIXED
+// NVIDIA-Style QDAC AURA JavaScript - UPDATED
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles.js
     if (typeof particlesJS !== 'undefined') {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateActiveNavLink();
     });
 
-    // FIXED: Smooth scrolling with proper offset for fixed navbar
+    // Smooth scrolling with proper offset for fixed navbar
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Intersection Observer for animations - FIXED z-index issues
+    // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -142,12 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                entry.target.style.zIndex = '10'; // Ensure animated elements have proper z-index
+                entry.target.style.zIndex = '10';
                 
                 // Add staggered animation for grids
                 if (entry.target.classList.contains('feature-card') || 
                     entry.target.classList.contains('expertise-card') ||
-                    entry.target.classList.contains('skill-item')) {
+                    entry.target.classList.contains('skill-item') ||
+                    entry.target.classList.contains('collab-item')) {
                     const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100;
                     entry.target.style.transitionDelay = `${delay}ms`;
                 }
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.feature-card, .expertise-card, .project-card, .skill-item');
+    const animatedElements = document.querySelectorAll('.feature-card, .expertise-card, .project-card, .skill-item, .collab-item, .service-category, .vision-card, .mission-card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -165,8 +166,16 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // FIXED: Remove problematic parallax that causes content hiding
-    // We'll use a more subtle effect that doesn't interfere with layout
+    // Form submission handler
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    }
 
     // Console welcome message
     console.log('%c🚀 QDAC AURA - Where Embedded Meets Intelligence', 'color: #76b900; font-size: 16px; font-weight: bold;');
@@ -186,9 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// FIXED: Improved mousemove effect that doesn't cause layout issues
+// Improved mousemove effect for cards
 document.addEventListener('mousemove', function(e) {
-    const cards = document.querySelectorAll('.feature-card, .expertise-card');
+    const cards = document.querySelectorAll('.feature-card, .expertise-card, .project-card');
     
     cards.forEach(card => {
         const rect = card.getBoundingClientRect();
@@ -210,7 +219,7 @@ document.addEventListener('mousemove', function(e) {
 
 // Reset card transforms when mouse leaves
 document.addEventListener('mouseleave', function() {
-    const cards = document.querySelectorAll('.feature-card, .expertise-card');
+    const cards = document.querySelectorAll('.feature-card, .expertise-card, .project-card');
     cards.forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
