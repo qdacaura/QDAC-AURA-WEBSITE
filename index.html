@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -34,14 +37,29 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <!-- NVIDIA-Style Hero Section -->
+    <section id="home" class="nvidia-hero">
+        <div class="hero-background">
+            <div class="particles-container" id="particles-js"></div>
+            <div class="gradient-overlay"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">⚡ QDAC AURA</h1>
-                <h2 class="hero-subtitle">Where Embedded Meets Intelligence</h2>
-                <p class="hero-tagline">Pioneering Solutions and Skill Transformation at the Convergence of Quantum Computing, Digital Twin, AI, and Cybersecurity (QDAC).</p>
-                <p class="hero-motto">Fusing intelligence for the quantum age</p>
+                <div class="hero-badge">
+                    <span>⚡ INNOVATION HUB</span>
+                </div>
+                <h1 class="hero-main-title">
+                    <span class="title-line">Where Embedded</span>
+                    <span class="title-line accent">Meets Intelligence</span>
+                </h1>
+                <p class="hero-subtitle">Pioneering Solutions at the Convergence of Quantum Computing, Digital Twin, AI, and Cybersecurity</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">Explore Expertise</button>
+                    <button class="btn btn-outline">Join Our Mission</button>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -49,59 +67,76 @@
     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="section-title">🔷 About QDAC AURA</h2>
-            <p class="section-subtitle">Innovation & Empowerment</p>
+            <div class="section-header">
+                <h2 class="section-title">Transforming Technology Landscape</h2>
+                <p class="section-subtitle">Innovation & Empowerment Through Advanced R&D</p>
+            </div>
             
-            <div class="about-content">
-                <p>QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
-                
-                <p>We focus on the powerful convergence of Quantum Computing, Digital Twin, Artificial Intelligence, and Cybersecurity. Our model is unique: high-impact industrial project development is seamlessly integrated with rigorous, hands-on training.</p>
-                
-                <p>Our core commitment is to build and train through experience. We use every active project—from AI-based analytical science to computational drug design—as a live laboratory for our consultants and graduates.</p>
-                
-                <p>Founded and mentored by <strong>Manivannan Natarajan</strong> (30+ years of industrial wisdom), QDAC AURA's team, including dynamic engineers like Navaneethan and Harishwaran, embodies the synergy of seasoned expertise and next-generation innovation.</p>
-                
-                <div class="motto-box">
-                    <p class="motto-text">💡 Think Deep. Build Smart. Innovate Fearlessly.</p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="lead">QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔬</div>
+                            <h4>Research Driven</h4>
+                            <p>Cutting-edge R&D in Quantum Computing, Digital Twin, AI, and Cybersecurity</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🎓</div>
+                            <h4>Training Excellence</h4>
+                            <p>Transforming graduates into industry-ready professionals through hands-on projects</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h4>Industry Focus</h4>
+                            <p>30+ years of industrial wisdom guiding next-generation innovation</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Expertise Section -->
-    <section id="expertise" class="section-padding bg-light">
+    <section id="expertise" class="section-padding dark-section">
         <div class="container">
-            <h2 class="section-title">🎯 Strategic Consulting & Project Development</h2>
-            <p class="section-subtitle">We offer specialized consulting, project execution, and R&D partnership in areas that require high precision and advanced modeling.</p>
+            <div class="section-header">
+                <h2 class="section-title">Strategic Consulting & Development</h2>
+                <p class="section-subtitle">Specialized expertise in high-precision advanced modeling</p>
+            </div>
             
-            <div class="expertise-table">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Area of Expertise</th>
-                                <th>Focus & Solution Development</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Computational Chemistry & AI</strong></td>
-                                <td>Expertise in AI-based drug design for accelerating lead compound identification, virtual screening, and optimization.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>High-Precision Optics Modeling</strong></td>
-                                <td>Developing Digital Twin models for Wavefront Sensors and Speckle Shear Interferometry for non-destructive testing and high-resolution optical measurement.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>AI in Analytical Science</strong></td>
-                                <td>Designing and deploying AI-based Raman Spectrometer systems for rapid, non-invasive material analysis and quality control.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>High-Energy Physics Digital Twins</strong></td>
-                                <td>Advanced digital twin modeling for plasma dynamics studies, including magnetic confinement for fusion reactor research.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon">🧪</div>
+                        <h3>Computational Chemistry & AI</h3>
+                    </div>
+                    <p>AI-based drug design for accelerating lead compound identification, virtual screening, and optimization.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔭</div>
+                        <h3>High-Precision Optics Modeling</h3>
+                    </div>
+                    <p>Digital Twin models for Wavefront Sensors and Speckle Shear Interferometry for non-destructive testing.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3>AI in Analytical Science</h3>
+                    </div>
+                    <p>AI-based Raman Spectrometer systems for rapid, non-invasive material analysis and quality control.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon">⚛️</div>
+                        <h3>High-Energy Physics Digital Twins</h3>
+                    </div>
+                    <p>Advanced digital twin modeling for plasma dynamics studies and fusion reactor research.</p>
                 </div>
             </div>
         </div>
@@ -110,32 +145,45 @@
     <!-- Projects Section -->
     <section id="projects" class="section-padding">
         <div class="container">
-            <h2 class="section-title">🧩 Featured Projects</h2>
-            <p class="section-subtitle">Our current active projects showcase the depth of our R&D capabilities and serve as our primary training platforms.</p>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing our R&D capabilities and training platforms</p>
+            </div>
             
-            <div class="row projects-grid">
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h4>Intelligent Industrial Control</h4>
-                        <p>F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization.</p>
+            <div class="projects-showcase">
+                <div class="project-main">
+                    <div class="project-card large">
+                        <div class="project-content">
+                            <h3>Intelligent Industrial Control</h3>
+                            <p>F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization systems.</p>
+                            <span class="project-tag">AI & Automation</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                
+                <div class="project-side">
                     <div class="project-card">
-                        <h4>Smart Retail Automation</h4>
-                        <p>AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
+                        <div class="project-content">
+                            <h4>Smart Retail Automation</h4>
+                            <p>AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
+                    
                     <div class="project-card">
-                        <h4>Traffic & Security Analytics</h4>
-                        <p>YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
+                        <div class="project-content">
+                            <h4>Traffic Analytics</h4>
+                            <p>YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
+                            <span class="project-tag">Deep Learning</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
+                    
                     <div class="project-card">
-                        <h4>Ecological Modeling</h4>
-                        <p>Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
+                        <div class="project-content">
+                            <h4>Ecological Modeling</h4>
+                            <p>Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
+                            <span class="project-tag">AI Research</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,16 +191,31 @@
     </section>
 
     <!-- Training Section -->
-    <section id="training" class="section-padding bg-light">
+    <section id="training" class="section-padding dark-section">
         <div class="container">
-            <h2 class="section-title">🎓 Graduate Skill Transformation</h2>
-            <p class="section-subtitle">Our Training Programs for Technology Graduates are entirely project-driven, ensuring participants gain practical, marketable skills.</p>
+            <div class="section-header">
+                <h2 class="section-title">Graduate Skill Transformation</h2>
+                <p class="section-subtitle">Project-driven training for market-ready professionals</p>
+            </div>
             
-            <div class="skills-container">
-                <div class="skill-pill">Industrial Digital Twin Modeling and Simulation</div>
-                <div class="skill-pill">Advanced Embedded Systems and Automation</div>
-                <div class="skill-pill">Deep Learning Model Design and Deployment (AI)</div>
-                <div class="skill-pill">IoT/IIoT Security and Threat Detection</div>
+            <div class="skills-showcase">
+                <div class="skill-category">
+                    <h4>Core Competencies</h4>
+                    <div class="skills-list">
+                        <div class="skill-item">Industrial Digital Twin Modeling</div>
+                        <div class="skill-item">Advanced Embedded Systems</div>
+                        <div class="skill-item">Deep Learning Deployment</div>
+                        <div class="skill-item">IoT Security & Threat Detection</div>
+                    </div>
+                </div>
+                
+                <div class="training-highlight">
+                    <div class="highlight-content">
+                        <h3>Learn Through Innovation</h3>
+                        <p>Every active project serves as a live laboratory for our consultants and graduates, ensuring practical, hands-on experience.</p>
+                        <button class="btn btn-outline">Start Your Journey</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -160,16 +223,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="section-title">🤝 Connect with Us</h2>
-            <div class="contact-content">
-                <p class="contact-intro">We are actively seeking industry partners for R&D collaboration and project deployment, and welcoming ambitious technology graduates ready to transform their careers through live project work.</p>
-                
-                <p class="contact-cta">Message us to explore how QDAC AURA can empower your innovation roadmap or accelerate your career.</p>
-                
-                <div class="contact-info">
-                    <p><strong>Get in Touch:</strong></p>
-                    <p>Email: contact@qdacaura.com</p>
-                    <p>Phone: +91-XXXXXXXXXX</p>
+            <div class="contact-hero">
+                <h2>Ready to Transform Your Future?</h2>
+                <p>Join us in pioneering the next generation of technology solutions</p>
+                <div class="contact-actions">
+                    <button class="btn btn-primary">Partner With Us</button>
+                    <button class="btn btn-outline">Career Opportunities</button>
                 </div>
             </div>
         </div>
@@ -178,12 +237,24 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 QDAC AURA. All Rights Reserved.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>QDAC AURA</h3>
+                    <p>Where Embedded Meets Intelligence</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 QDAC AURA. All Rights Reserved.</p>
+                    <p>Fusing intelligence for the quantum age</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <!-- Custom JS -->
     <script src="js/script.js"></script>
