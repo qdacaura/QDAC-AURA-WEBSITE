@@ -1,4 +1,4 @@
-/* NVIDIA-Inspired QDAC AURA Styles */
+/* NVIDIA-Inspired QDAC AURA Styles - FIXED */
 :root {
     --primary-dark: #0f0f0f;
     --secondary-dark: #1a1a1a;
@@ -25,18 +25,20 @@ body {
     overflow-x: hidden;
 }
 
-/* NVIDIA-Style Navigation */
+/* FIXED: NVIDIA-Style Navigation - More Premium */
 .navbar {
-    background: rgba(15, 15, 15, 0.95) !important;
+    background: rgba(15, 15, 15, 0.98) !important;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
 }
 
 .navbar.scrolled {
-    background: rgba(15, 15, 15, 0.98) !important;
-    padding: 0.5rem 0;
+    background: rgba(15, 15, 15, 0.99) !important;
+    padding: 0.8rem 0;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
@@ -46,40 +48,63 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-right: 3rem;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .navbar-nav .nav-link {
     color: var(--text-primary) !important;
     font-weight: 500;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem !important;
-    border-radius: 6px;
+    padding: 0.8rem 1.5rem !important;
+    border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
 }
 
 .navbar-nav .nav-link:hover {
     color: var(--accent-green) !important;
     background: rgba(118, 185, 0, 0.1);
+    border: 1px solid rgba(118, 185, 0, 0.3);
+    transform: translateY(-2px);
 }
 
+/* Remove underline and add modern indicator */
 .navbar-nav .nav-link::after {
+    display: none; /* Remove the underline */
+}
+
+.navbar-nav .nav-link::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--accent-green);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+    border-radius: 0 2px 2px 0;
+    transition: height 0.3s ease;
+    transform: translateY(-50%);
 }
 
-.navbar-nav .nav-link:hover::after {
-    width: 80%;
+.navbar-nav .nav-link:hover::before {
+    height: 60%;
 }
 
-/* NVIDIA-Style Hero Section */
+/* Active state */
+.navbar-nav .nav-link.active {
+    color: var(--accent-green) !important;
+    background: rgba(118, 185, 0, 0.15);
+    border: 1px solid rgba(118, 185, 0, 0.4);
+}
+
+/* FIXED: NVIDIA-Style Hero Section - Better Z-index */
 .nvidia-hero {
     position: relative;
     height: 100vh;
@@ -89,6 +114,7 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
     overflow: hidden;
+    z-index: 2; /* Ensure hero stays above background but below content */
 }
 
 .hero-background {
@@ -104,6 +130,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
 .gradient-overlay {
@@ -114,11 +141,12 @@ body {
     height: 100%;
     background: radial-gradient(circle at 20% 80%, rgba(118, 185, 0, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(0, 180, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3; /* Higher z-index to stay above background */
     text-align: center;
     max-width: 1200px;
     padding: 0 2rem;
@@ -135,6 +163,7 @@ body {
     font-weight: 600;
     margin-bottom: 2rem;
     backdrop-filter: blur(10px);
+    z-index: 3;
 }
 
 .hero-main-title {
@@ -142,6 +171,8 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    z-index: 3;
+    position: relative;
 }
 
 .title-line {
@@ -162,6 +193,8 @@ body {
     margin: 0 auto 3rem;
     font-weight: 400;
     line-height: 1.6;
+    z-index: 3;
+    position: relative;
 }
 
 .hero-actions {
@@ -170,6 +203,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 4rem;
+    z-index: 3;
+    position: relative;
 }
 
 .btn {
@@ -181,6 +216,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+    position: relative;
+    z-index: 3;
 }
 
 .btn-primary {
@@ -210,6 +247,7 @@ body {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 
 .scroll-arrow {
@@ -245,9 +283,11 @@ body {
     }
 }
 
-/* Section Styles */
+/* FIXED: Content Sections - Proper Z-index */
 .section-padding {
     padding: 120px 0;
+    position: relative;
+    z-index: 10; /* Higher than hero background */
 }
 
 .dark-section {
@@ -263,11 +303,14 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 30% 70%, rgba(118, 185, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: 10;
 }
 
 .section-title {
@@ -278,6 +321,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+    z-index: 10;
 }
 
 .section-subtitle {
@@ -285,12 +330,16 @@ body {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 /* About Section */
 .about-grid {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .about-content .lead {
@@ -300,6 +349,8 @@ body {
     max-width: 800px;
     margin: 0 auto 4rem;
     line-height: 1.8;
+    position: relative;
+    z-index: 10;
 }
 
 .features-grid {
@@ -307,6 +358,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .feature-card {
@@ -318,6 +371,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 .feature-card::before {
@@ -329,6 +383,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(118, 185, 0, 0.1), transparent);
     transition: left 0.6s ease;
+    z-index: -1;
 }
 
 .feature-card:hover::before {
@@ -363,6 +418,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .expertise-card {
@@ -373,6 +430,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 .expertise-card::after {
@@ -423,6 +481,8 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .project-main {
@@ -437,6 +497,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     height: 100%;
+    z-index: 10;
 }
 
 .project-card.large {
@@ -457,6 +518,7 @@ body {
     background: linear-gradient(135deg, rgba(118, 185, 0, 0.1), rgba(0, 180, 255, 0.1));
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .project-card:hover::before {
@@ -519,6 +581,8 @@ body {
     gap: 4rem;
     margin-top: 3rem;
     align-items: start;
+    position: relative;
+    z-index: 10;
 }
 
 .skill-category h4 {
@@ -543,6 +607,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 .skill-item::before {
@@ -572,6 +637,8 @@ body {
     padding: 3rem;
     border: 1px solid rgba(118, 185, 0, 0.2);
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
 }
 
 .highlight-content h3 {
@@ -592,6 +659,8 @@ body {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .contact-hero h2 {
@@ -621,6 +690,8 @@ body {
     background: var(--secondary-dark);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3rem 0;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -645,8 +716,32 @@ body {
     color: var(--text-secondary);
 }
 
+/* NEW: NVIDIA-Style Mobile Menu */
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(118, 185, 0, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar-nav {
+        background: rgba(15, 15, 15, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    
     .hero-actions {
         flex-direction: column;
         align-items: center;
@@ -694,5 +789,10 @@ body {
     
     .hero-content {
         padding: 0 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 1rem !important;
+        font-size: 1rem;
     }
 }

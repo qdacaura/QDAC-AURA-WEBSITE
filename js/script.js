@@ -1,4 +1,4 @@
-// NVIDIA-Style QDAC AURA JavaScript
+// NVIDIA-Style QDAC AURA JavaScript - FIXED
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles.js
     if (typeof particlesJS !== 'undefined') {
@@ -69,14 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             navbar.classList.remove('scrolled');
         }
+        
+        // Update active nav link based on scroll position
+        updateActiveNavLink();
     });
 
-    // Smooth scrolling with offset for fixed navbar
+    // FIXED: Smooth scrolling with proper offset for fixed navbar
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            
             if (target) {
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
                 const offset = 80;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 
@@ -84,11 +97,41 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                }
             }
         });
     });
 
-    // Intersection Observer for animations
+    // Function to update active nav link based on scroll position
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Intersection Observer for animations - FIXED z-index issues
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -99,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                entry.target.style.zIndex = '10'; // Ensure animated elements have proper z-index
                 
                 // Add staggered animation for grids
                 if (entry.target.classList.contains('feature-card') || 
@@ -116,18 +160,13 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, z-index 0.6s ease';
+        el.style.zIndex = '10';
         observer.observe(el);
     });
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.nvidia-hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
+    // FIXED: Remove problematic parallax that causes content hiding
+    // We'll use a more subtle effect that doesn't interfere with layout
 
     // Console welcome message
     console.log('%c🚀 QDAC AURA - Where Embedded Meets Intelligence', 'color: #76b900; font-size: 16px; font-weight: bold;');
@@ -141,10 +180,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             document.body.style.opacity = '1';
         }, 100);
+        
+        // Initialize active nav link
+        updateActiveNavLink();
     });
 });
 
-// Add mousemove parallax effect for cards
+// FIXED: Improved mousemove effect that doesn't cause layout issues
 document.addEventListener('mousemove', function(e) {
     const cards = document.querySelectorAll('.feature-card, .expertise-card');
     
@@ -159,6 +201,17 @@ document.addEventListener('mousemove', function(e) {
         const angleY = (x - centerX) / 25;
         const angleX = (centerY - y) / 25;
         
-        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-8px)`;
+        // Only apply transform if card is fully in viewport
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-8px)`;
+        }
+    });
+});
+
+// Reset card transforms when mouse leaves
+document.addEventListener('mouseleave', function() {
+    const cards = document.querySelectorAll('.feature-card, .expertise-card');
+    cards.forEach(card => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
 });
