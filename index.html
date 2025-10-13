@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
@@ -20,19 +20,21 @@
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <strong>QDAC AURA</strong>
-                <span class="tagline">Fusing intelligence for the quantum age</span>
+                <div class="brand-container">
+                    <span class="brand-main">QDAC AURA</span>
+                    <span class="brand-tagline">Fusing intelligence for the quantum age</span>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav nav-left">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav nav-right">
                     <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -40,7 +42,7 @@
         </div>
     </nav>
 
-    <!-- NVIDIA-Style Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="nvidia-hero">
         <div class="hero-background">
             <div class="particles-container" id="particles-js"></div>
@@ -60,9 +62,6 @@
                     <button class="btn btn-primary">Explore Expertise</button>
                     <button class="btn btn-outline">Join Our Mission</button>
                 </div>
-                <div class="scroll-indicator">
-                    <div class="scroll-arrow"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -70,22 +69,36 @@
     <!-- Vision & Mission Section -->
     <section id="vision" class="section-padding dark-section">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-6">
                     <div class="vision-card">
+                        <div class="card-icon">🎯</div>
                         <h2>Our Vision</h2>
-                        <p>“To be a global catalyst in engineering excellence by empowering technologists with future-ready skills in Quantum Computing (Q), Digital Twin (D), Artificial Intelligence (A), and Cybersecurity (C), bridging the academic-industry divide and fostering sustainable innovation for a smarter, safer, and more connected world.”</p>
+                        <p>To be a global catalyst in engineering excellence by empowering technologists with future-ready skills in Quantum Computing (Q), Digital Twin (D), Artificial Intelligence (A), and Cybersecurity (C), bridging the academic-industry divide and fostering sustainable innovation for a smarter, safer, and more connected world.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="mission-card">
+                        <div class="card-icon">🚀</div>
                         <h2>Our Mission</h2>
-                        <ul>
-                            <li>To deliver cutting-edge consultation and solutions in Q-DAC domains</li>
-                            <li>To design and implement advanced training programs</li>
-                            <li>To incubate student-led innovations through deep tech research</li>
-                            <li>To build a collaborative ecosystem for co-creating solutions</li>
-                        </ul>
+                        <div class="mission-list">
+                            <div class="mission-item">
+                                <span class="mission-icon">🔬</span>
+                                <span>Deliver cutting-edge consultation in Q-DAC domains</span>
+                            </div>
+                            <div class="mission-item">
+                                <span class="mission-icon">🎓</span>
+                                <span>Implement advanced training programs for real-time expertise</span>
+                            </div>
+                            <div class="mission-item">
+                                <span class="mission-icon">💡</span>
+                                <span>Incubate student-led innovations through deep tech research</span>
+                            </div>
+                            <div class="mission-item">
+                                <span class="mission-icon">🤝</span>
+                                <span>Build collaborative ecosystem for co-creating solutions</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,16 +114,19 @@
             </div>
             
             <div class="about-content">
-                <p>QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
-                
-                <p>We focus on the powerful convergence of Quantum Computing, Digital Twin, Artificial Intelligence, and Cybersecurity. Our model is unique: high-impact industrial project development is seamlessly integrated with rigorous, hands-on training.</p>
-                
-                <p>Our core commitment is to build and train through experience. We use every active project—from AI-based analytical science to computational drug design—as a live laboratory for our consultants and graduates.</p>
-                
-                <p>Founded and mentored by <strong>Manivannan Natarajan</strong> (30+ years of industrial wisdom), QDAC AURA's team, including dynamic engineers like Navaneethan and Harishwaran, embodies the synergy of seasoned expertise and next-generation innovation.</p>
+                <div class="about-text">
+                    <p>QDAC AURA is a specialized innovation hub and deep-tech training center that operates on a dual mandate: delivering advanced R&D solutions and transforming technology graduates into industry-ready professionals.</p>
+                    
+                    <p>We focus on the powerful convergence of Quantum Computing, Digital Twin, Artificial Intelligence, and Cybersecurity. Our model is unique: high-impact industrial project development is seamlessly integrated with rigorous, hands-on training.</p>
+                    
+                    <p>Our core commitment is to build and train through experience. We use every active project—from AI-based analytical science to computational drug design—as a live laboratory for our consultants and graduates.</p>
+                    
+                    <p>Founded and mentored by <strong>Manivannan Natarajan</strong> (30+ years of industrial wisdom), QDAC AURA's team, including dynamic engineers like Navaneethan and Harishwaran, embodies the synergy of seasoned expertise and next-generation innovation.</p>
+                </div>
                 
                 <div class="motto-box">
-                    <p class="motto-text">💡 Think Deep. Build Smart. Innovate Fearlessly.</p>
+                    <div class="motto-icon">💡</div>
+                    <p class="motto-text">Think Deep. Build Smart. Innovate Fearlessly.</p>
                 </div>
             </div>
         </div>
@@ -126,34 +142,26 @@
             
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <div class="card-header">
-                        <div class="card-icon">🧪</div>
-                        <h3>Computational Chemistry & AI</h3>
-                    </div>
+                    <div class="expertise-icon">🧪</div>
+                    <h3>Computational Chemistry & AI</h3>
                     <p>Expertise in AI-based drug design for accelerating lead compound identification, virtual screening, and optimization.</p>
                 </div>
                 
                 <div class="expertise-card">
-                    <div class="card-header">
-                        <div class="card-icon">🔭</div>
-                        <h3>High-Precision Optics Modeling</h3>
-                    </div>
+                    <div class="expertise-icon">🔭</div>
+                    <h3>High-Precision Optics Modeling</h3>
                     <p>Developing Digital Twin models for Wavefront Sensors and Speckle Shear Interferometry for non-destructive testing.</p>
                 </div>
                 
                 <div class="expertise-card">
-                    <div class="card-header">
-                        <div class="card-icon">📊</div>
-                        <h3>AI in Analytical Science</h3>
-                    </div>
+                    <div class="expertise-icon">📊</div>
+                    <h3>AI in Analytical Science</h3>
                     <p>Designing and deploying AI-based Raman Spectrometer systems for rapid, non-invasive material analysis and quality control.</p>
                 </div>
                 
                 <div class="expertise-card">
-                    <div class="card-header">
-                        <div class="card-icon">⚛️</div>
-                        <h3>High-Energy Physics Digital Twins</h3>
-                    </div>
+                    <div class="expertise-icon">⚛️</div>
+                    <h3>High-Energy Physics Digital Twins</h3>
                     <p>Advanced digital twin modeling for plasma dynamics studies and fusion reactor research.</p>
                 </div>
             </div>
@@ -168,35 +176,39 @@
                 <p class="section-subtitle">At QDAC Aura, we specialize in two primary domains: Consultation & Training</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-category">
-                    <h3>Technology Consultation</h3>
-                    <ul>
-                        <li>Embedded Systems Design (STM32, ESP32, ARM, RISC-V)</li>
-                        <li>AI-Powered System Integration (CV, NLP, and Data Analytics)</li>
-                        <li>Industry Automation & IoT Development</li>
-                        <li>Product Design and Architecture Review</li>
-                        <li>Startup Mentoring for Tech Entrepreneurs</li>
-                    </ul>
+            <div class="services-showcase">
+                <div class="service-main">
+                    <div class="service-card consultation">
+                        <h3>Technology Consultation</h3>
+                        <ul class="service-list">
+                            <li>Embedded Systems Design (STM32, ESP32, ARM, RISC-V)</li>
+                            <li>AI-Powered System Integration (CV, NLP, and Data Analytics)</li>
+                            <li>Industry Automation & IoT Development</li>
+                            <li>Product Design and Architecture Review</li>
+                            <li>Startup Mentoring for Tech Entrepreneurs</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <div class="service-category">
-                    <h3>Advanced Technology Training</h3>
-                    <ul>
-                        <li>AI for Engineers: From Basics to Deep Learning</li>
-                        <li>Embedded & IoT Project Building with Real-Time Applications</li>
-                        <li>DSP Applications for Mechatronics & Robotics</li>
-                        <li>Quantum Computing Basics</li>
-                        <li>Python & MATLAB for Engineers</li>
-                        <li>Capstone Projects and Final-Year Project Mentoring</li>
-                    </ul>
-                    
-                    <div class="training-modes">
-                        <h4>Training Modes:</h4>
-                        <div class="mode-tags">
-                            <span class="mode-tag">Online (Live & Recorded)</span>
-                            <span class="mode-tag">Offline Hands-On Workshops</span>
-                            <span class="mode-tag">Hybrid Bootcamps</span>
+                <div class="service-main">
+                    <div class="service-card training">
+                        <h3>Advanced Technology Training</h3>
+                        <ul class="service-list">
+                            <li>AI for Engineers: From Basics to Deep Learning</li>
+                            <li>Embedded & IoT Project Building with Real-Time Applications</li>
+                            <li>DSP Applications for Mechatronics & Robotics</li>
+                            <li>Quantum Computing Basics</li>
+                            <li>Python & MATLAB for Engineers</li>
+                            <li>Capstone Projects and Final-Year Project Mentoring</li>
+                        </ul>
+                        
+                        <div class="training-modes">
+                            <h4>Training Modes:</h4>
+                            <div class="mode-tags">
+                                <span class="mode-tag">Online (Live & Recorded)</span>
+                                <span class="mode-tag">Offline Hands-On Workshops</span>
+                                <span class="mode-tag">Hybrid Bootcamps</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,7 +220,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - COMPLETELY REDESIGNED -->
     <section id="projects" class="section-padding dark-section">
         <div class="container">
             <div class="section-header">
@@ -217,38 +229,62 @@
             </div>
             
             <div class="projects-showcase">
-                <div class="project-main">
-                    <div class="project-card large">
-                        <div class="project-content">
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <div class="project-header">
                             <h3>Intelligent Industrial Control</h3>
-                            <p>F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization systems.</p>
-                            <span class="project-tag">AI & Automation</span>
+                            <span class="project-badge">AI & Automation</span>
+                        </div>
+                        <p class="project-description">F0-Based Retort Automation (12D Concept) using AI and embedded feedback for precision sterilization systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Embedded Systems</span>
+                            <span class="tech-tag">Automation</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-side">
-                    <div class="project-card">
-                        <div class="project-content">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
                             <h4>Smart Retail Automation</h4>
-                            <p>AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
-                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-badge">Computer Vision</span>
+                        </div>
+                        <p class="project-description">AI-Based Food Image Billing Kiosk for real-time recognition and automation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Retail Tech</span>
                         </div>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-content">
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
                             <h4>Traffic & Security Analytics</h4>
-                            <p>YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
-                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-badge">Deep Learning</span>
+                        </div>
+                        <p class="project-description">YOLOv8-Based Vehicle Velocity Estimation & Number Identification.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Analytics</span>
                         </div>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-content">
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
                             <h4>Ecological Modeling</h4>
-                            <p>Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
-                            <span class="project-tag">AI Research</span>
+                            <span class="project-badge">AI Research</span>
+                        </div>
+                        <p class="project-description">Deep-learning models for Bird Sound Identification & Habitat Classification.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Ecology</span>
+                            <span class="tech-tag">Research</span>
                         </div>
                     </div>
                 </div>
@@ -264,23 +300,29 @@
                 <p class="section-subtitle">Our Training Programs for Technology Graduates are entirely project-driven, ensuring participants gain practical, marketable skills.</p>
             </div>
             
-            <div class="skills-showcase">
-                <div class="skill-category">
-                    <h4>Core Competencies</h4>
-                    <div class="skills-list">
-                        <div class="skill-item">Industrial Digital Twin Modeling</div>
-                        <div class="skill-item">Advanced Embedded Systems</div>
-                        <div class="skill-item">Deep Learning Deployment</div>
-                        <div class="skill-item">IoT Security & Threat Detection</div>
-                    </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">🏭</div>
+                    <h4>Industrial Digital Twin Modeling</h4>
+                    <p>Create and simulate digital replicas of physical systems</p>
                 </div>
                 
-                <div class="training-highlight">
-                    <div class="highlight-content">
-                        <h3>Learn Through Innovation</h3>
-                        <p>Every active project serves as a live laboratory for our consultants and graduates, ensuring practical, hands-on experience.</p>
-                        <button class="btn btn-outline">Start Your Journey</button>
-                    </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h4>Advanced Embedded Systems</h4>
+                    <p>Master embedded development with real-world applications</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h4>Deep Learning Deployment</h4>
+                    <p>Design and deploy AI models for practical solutions</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🛡️</div>
+                    <h4>IoT Security & Threat Detection</h4>
+                    <p>Secure connected systems and detect vulnerabilities</p>
                 </div>
             </div>
         </div>
@@ -295,11 +337,33 @@
             </div>
             
             <div class="collaborations-grid">
-                <div class="collab-item">PSG Tech</div>
-                <div class="collab-item">Kamarajar Engineering College</div>
-                <div class="collab-item">Columbia University (Research Collaboration)</div>
-                <div class="collab-item">IIT Chennai – GDC Program</div>
-                <div class="collab-item">Techland AI Internship – Student Incubation</div>
+                <div class="collab-card">
+                    <div class="collab-logo">PSG</div>
+                    <h4>PSG Tech</h4>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="collab-logo">KEC</div>
+                    <h4>Kamarajar Engineering College</h4>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="collab-logo">CU</div>
+                    <h4>Columbia University</h4>
+                    <p>Research Collaboration</p>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="collab-logo">IIT</div>
+                    <h4>IIT Chennai</h4>
+                    <p>GDC Program</p>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="collab-logo">AI</div>
+                    <h4>Techland AI</h4>
+                    <p>Student Incubation</p>
+                </div>
             </div>
         </div>
     </section>
@@ -312,23 +376,35 @@
                 <p class="section-subtitle">We are actively seeking industry partners for R&D collaboration and project deployment, and welcoming ambitious technology graduates ready to transform their careers through live project work.</p>
             </div>
             
-            <div class="contact-content">
-                <p class="contact-cta">Message us to explore how QDAC AURA can empower your innovation roadmap or accelerate your career.</p>
-                
+            <div class="contact-container">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Email:</strong>
-                        <a href="mailto:qdacaura@gmail.com">qdacaura@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong>
-                        <a href="tel:+919994304608">+91 99943 04608</a>
+                    <div class="contact-card">
+                        <h3>Get In Touch</h3>
+                        <p class="contact-description">Message us to explore how QDAC AURA can empower your innovation roadmap or accelerate your career.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:qdacaura@gmail.com">qdacaura@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <a href="tel:+919994304608">+91 99943 04608</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <form action="#" method="post">
-                        <div class="form-row">
+                    <form>
+                        <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -338,15 +414,18 @@
                                 <input type="email" id="email" name="email" required>
                             </div>
                         </div>
+                        
                         <div class="form-group">
                             <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -361,7 +440,7 @@
                     <h3>QDAC AURA</h3>
                     <p>Fusing intelligence for the quantum age</p>
                 </div>
-                <div class="footer-info">
+                <div class="footer-copyright">
                     <p>&copy; 2024 QDAC AURA. All Rights Reserved.</p>
                     <p>Where Embedded Meets Intelligence</p>
                 </div>
